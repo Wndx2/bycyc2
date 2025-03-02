@@ -8,10 +8,47 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
 h1 {
     font-size: 60px;
     color: #ffffff;
     font-family: monospace, serif;
     text-align: center;
+}
+h2 {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: monospace, serif;
+    text-align: center;
+    margin: 32px;
+}
+h3 {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: monospace, serif;
+    text-align: center;
+    font-weight: normal;
+}
+h4 {
+    font-size: 16px;
+    color: #f2ed58;
+    font-family: monospace, serif;
+    text-align: center;
+    font-weight: normal;
+}
+h5 {
+    font-size: 16px;
+    color: #696969;
+    font-family: monospace, serif;
+    text-align: center;
+    font-weight: normal;
+
+    margin-top: -16px;
+}
+
+a {
+    font-size: 16px;
+    color: #5865f2;
+    font-family: monospace, serif;
+    text-align: center;
+    font-weight: normal;
 }
