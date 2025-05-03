@@ -1,7 +1,6 @@
-
 @font-face {
     font-family: BrassMono;
-    src: url(/Fonts/BrassMono-Regular.ttf);
+    src: url(/Fonts/fontforge.otf);
 }
 
 body {
@@ -13,48 +12,82 @@ body {
     align-items: center;
     flex-direction: column;
 }
-h1 {
+
+.title {
     font-size: 60px;
     color: #ffffff;
     font-family: BrassMono, serif;
     text-align: center;
 }
-h2 {
+
+.section-title {
     font-size: 24px;
     color: #ffffff;
     font-family: BrassMono, serif;
     text-align: center;
     margin: 32px;
 }
-h3 {
+
+.text {
     font-size: 16px;
-    margin-top: -4px;
+
     color: #ffffff;
     font-family: BrassMono, serif;
     text-align: center;
     font-weight: normal;
 }
-h4 {
+
+.yellow {
+    font-size: 16px;
+    margin: 32px;
+    color: #f2ed58;
+    font-family: BrassMono, serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.grey {
+    font-size: 16px;
+    color: #696969;
+    font-family: BrassMono, serif;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.quote {
     font-size: 16px;
     color: #f2ed58;
     font-family: BrassMono, serif;
     text-align: center;
     font-weight: normal;
 }
-h5 {
-    font-size: 16px;
-    color: #696969;
-    font-family: BrassMono, serif;
-    text-align: center;
-    font-weight: normal;
-
-    margin-top: -14px;
-}
 
 a {
     font-size: 16px;
+
     color: #5865f2;
     font-family: BrassMono, serif;
     text-align: center;
     font-weight: normal;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(69px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#displayedImage {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+#displayedImage.fade-out {
+    opacity: 0;
 }
