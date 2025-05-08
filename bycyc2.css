@@ -44,7 +44,8 @@ body {
     color: #696969;
     font-family: BrassMono, longcang, serif;
     text-align: center;
-    margin-top: -px;
+    margin-top: -32px;
+    margin-bottom: 16px;
 }
 
 .text {
