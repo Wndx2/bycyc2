@@ -3,6 +3,11 @@
     src: url(/Fonts/fontforge.otf);
 }
 
+@font-face {
+    font-family: longcang;
+    src: url(/Fonts/LongCang-Regular.ttf);
+}
+
 body {
     background: linear-gradient(to bottom, #0D001F, #19014D); 
     min-height: 100vh;
@@ -16,58 +21,100 @@ body {
 .title {
     font-size: 60px;
     color: #ffffff;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
+    text-align: center;
+}
+
+.cntitle {
+    font-size: 40px;
+    color: #696969;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
 }
 
 .section-title {
-    font-size: 24px;
+    font-size: 30px;
     color: #ffffff;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     margin: 32px;
 }
+.cnsection-title {
+    font-size: 20px;
+    color: #696969;
+    font-family: BrassMono, longcang, serif;
+    text-align: center;
+    margin-top: -px;
+}
 
 .text {
-    font-size: 16px;
-
+    font-size: 20px;
     color: #ffffff;
-    font-family: BrassMono, serif;
+    margin: 8px;
+    font-family: BrassMono, longcang, serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.cntext {
+    font-size: 15px;
+    margin-top: -4px;
+    color: #696969;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     font-weight: normal;
 }
 
 .yellow {
-    font-size: 16px;
+    font-size: 20px;
     margin: 32px;
     color: #f2ed58;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.cnyellow {
+    font-size: 15px;
+    margin-top: -32px;
+    color: #857600;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     font-weight: normal;
 }
 
 .grey {
-    font-size: 16px;
+    font-size: 20px;
     color: #696969;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     font-weight: normal;
     margin-top: 0px;
 }
 
+.cngrey {
+    font-size: 15px;
+    color: #343434;
+    font-family: BrassMono, longcang, serif;
+    text-align: center;
+    font-weight: normal;
+    margin-top: -16px;
+}
+
 .quote {
-    font-size: 16px;
+    font-size: 20px;
+    margin: 32px;
     color: #f2ed58;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     font-weight: normal;
 }
 
 a {
-    font-size: 16px;
+    font-size: 20px;
 
     color: #5865f2;
-    font-family: BrassMono, serif;
+    font-family: BrassMono, longcang, serif;
     text-align: center;
     font-weight: normal;
 }
@@ -83,11 +130,11 @@ a {
     transform: translateY(0);
 }
 
-#displayedImage {
+#gay {
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
 
-#displayedImage.fade-out {
+#gay.fade-out {
     opacity: 0;
 }
