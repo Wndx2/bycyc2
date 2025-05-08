@@ -25,19 +25,24 @@ function shuffleImage() {
     
     // Wait for the fade-out transition to complete
     setTimeout(() => {
-        // Change the image source after fade-out
-        currentIndex = (currentIndex + 1) % images.length; // Increment index and reset to 0 if it exceeds the array length
-        imageElement.src = images[currentIndex];
-        
-        // Wait a moment before fading back in
-        setTimeout(() => {
-            imageElement.classList.remove('fade-out'); // Trigger fade-in
-        }, 50); // Small delay to ensure the new image is loaded
-    }, 500); // Match the duration of the CSS transition
+        // Preload the next image
+        const nextImage = new Image();
+        nextImage.src = images[(currentIndex + 1) % images.length];
+        nextImage.onload = () => {
+            // Update the image source after the next image is fully loaded
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = nextImage.src;
+
+            // Wait 0.5 seconds before fading in
+            setTimeout(() => {
+                imageElement.classList.remove('fade-out'); // Trigger fade-in
+            }, 500); // 0.5-second delay
+        };
+    }, 500); // Match the duration of the CSS fade-out transition
 }
 
 shuffleImage();
-setInterval(shuffleImage, 2000); // Change image every 2 seconds
+setInterval(shuffleImage, 3000); // Change image every 3 seconds (2s for display + 0.5s fade-out + 0.5s delay)
 
 function handleScroll() {
     const fadeElements = document.querySelectorAll('.fade-in');
