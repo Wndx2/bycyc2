@@ -18,24 +18,27 @@ const images = [
 let currentIndex = 0;
 
 function shuffleImage() {
-    const imageElement = document.getElementById('displayedImage');
+    const imageElement = document.getElementById('gay');
     
     // Add fade-out class
     imageElement.classList.add('fade-out');
     
     // Wait for the fade-out transition to complete
     setTimeout(() => {
-        // Change the image source
-        imageElement.src = images[currentIndex];
+        // Change the image source after fade-out
         currentIndex = (currentIndex + 1) % images.length; // Increment index and reset to 0 if it exceeds the array length
+        imageElement.src = images[currentIndex];
         
-        // Remove fade-out class and add fade-in effect
-        imageElement.classList.remove('fade-out');
+        // Wait a moment before fading back in
+        setTimeout(() => {
+            imageElement.classList.remove('fade-out'); // Trigger fade-in
+        }, 50); // Small delay to ensure the new image is loaded
     }, 500); // Match the duration of the CSS transition
 }
 
 shuffleImage();
 setInterval(shuffleImage, 2000); // Change image every 2 seconds
+
 function handleScroll() {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => {
