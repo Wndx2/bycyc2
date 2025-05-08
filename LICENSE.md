@@ -1,7 +1,7 @@
 Restricted Use License
 Copyright (c) 2025 Juyoung Park (wndx2)
 
-For the purposes of this License, the term "Vault" refers to all contents contained within the directory, including but not limited to notes, diagrams, images, files, folders, subdirectories, metadata, and any other associated materials.
+For the purposes of this License, the term "Vault" refers to all contents contained within the directory, including but not limited to note(s), code(s) diagram(s), image(s), file(s), folder(s), subdirectory(ies), metadata(s), and any other associated material(s).
 
 Permission is hereby granted to any individual obtaining a copy of this Vault and its accompanying documentation (collectively, the "Vault") to view and study the Vault solely for personal, educational, or evaluative purposes, subject to the following conditions:
 
