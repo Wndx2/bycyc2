@@ -1,3 +1,4 @@
+```
 Restricted Use License
 Copyright (c) 2025 Juyoung Park (wndx2)
 
@@ -9,3 +10,4 @@ Permission is hereby granted to any individual obtaining a copy of this Vault an
 - Any unauthorized use, reproduction, or distribution of the Vault, in whole or in part, is strictly prohibited.
 
 The Vault is provided "as is", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Vault or the use of or other dealings in the Vault.
+```
