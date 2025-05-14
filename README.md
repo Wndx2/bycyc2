@@ -1,1 +1,1 @@
-1/6 of whole content released.
+0.95/6 of whole content released.
