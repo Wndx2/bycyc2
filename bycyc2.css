@@ -131,11 +131,11 @@ a {
     transform: translateY(0);
 }
 
-#gay {
+#gay-image {
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
 
-#gay.fade-out {
+#gay-image.fade-out {
     opacity: 0;
 }

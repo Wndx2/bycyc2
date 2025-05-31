@@ -1,4 +1,4 @@
-const images = [
+const gay_image = [
     "/bycyc Evidence/gay/gay1.png",
     "/bycyc Evidence/gay/gay2.png",
     "/bycyc Evidence/gay/gay3.png",
@@ -13,20 +13,24 @@ const images = [
     "/bycyc Evidence/gay/gay12.png",
     "/bycyc Evidence/gay/gay13.png",
     "/bycyc Evidence/gay/gay14.png",
-    "/bycyc Evidence/gay/gay15.png"
+    "/bycyc Evidence/gay/gay15.png",
+    "/bycyc Evidence/gay/gay16.png",
+    "/bycyc Evidence/gay/gay17.png",
+    "/bycyc Evidence/gay/gay18.png",
+    "/bycyc Evidence/gay/gay1.png",
 ];
-let currentIndex = 0;
+let gay_image_currentIndex = 0;
 
-function shuffleImage() {
-    const imageElement = document.getElementById('gay');
+function shuffleGayImage() {
+    const imageElement = document.getElementById('gay-image');
     
     imageElement.classList.add('fade-out');
     
     setTimeout(() => {
         const nextImage = new Image();
-        nextImage.src = images[(currentIndex + 1) % images.length];
+        nextImage.src = gay_image[(gay_image_currentIndex + 1) % gay_image.length];
         nextImage.onload = () => {
-            currentIndex = (currentIndex + 1) % images.length;
+            gay_image_currentIndex = (gay_image_currentIndex + 1) % gay_image.length;
             imageElement.src = nextImage.src;
 
             setTimeout(() => {
@@ -36,8 +40,8 @@ function shuffleImage() {
     }, 500); 
 }
 
-shuffleImage();
-setInterval(shuffleImage, 3000);
+shuffleGayImage();
+setInterval(shuffleGayImage, 3000);
 
 function handleScroll() {
     const fadeElements = document.querySelectorAll('.fade-in');
