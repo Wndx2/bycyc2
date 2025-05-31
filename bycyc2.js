@@ -21,24 +21,35 @@ const gay_image = [
 ];
 let gay_image_currentIndex = 0;
 
+function setGayImage(index) {
+    const imageElement = document.getElementById('gay-image');
+    imageElement.src = gay_image[index];
+}
+
 function shuffleGayImage() {
     const imageElement = document.getElementById('gay-image');
-    
     imageElement.classList.add('fade-out');
-    
-    setTimeout(() => {
-        const nextImage = new Image();
-        nextImage.src = gay_image[(gay_image_currentIndex + 1) % gay_image.length];
-        nextImage.onload = () => {
-            gay_image_currentIndex = (gay_image_currentIndex + 1) % gay_image.length;
-            imageElement.src = nextImage.src;
 
+    setTimeout(() => {
+        gay_image_currentIndex = (gay_image_currentIndex + 1) % gay_image.length;
+        const nextImage = new Image();
+        nextImage.src = gay_image[gay_image_currentIndex];
+        nextImage.onload = () => {
+            imageElement.src = nextImage.src;
             setTimeout(() => {
-                imageElement.classList.remove('fade-out'); 
-            }, 500); 
+                imageElement.classList.remove('fade-out');
+            }, 500);
         };
-    }, 500); 
+        nextImage.onerror = () => {
+            shuffleGayImage();
+        };
+    }, 500);
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    setGayImage(gay_image_currentIndex);
+    setInterval(shuffleGayImage, 3000);
+});
 
 shuffleGayImage();
 setInterval(shuffleGayImage, 3000);
