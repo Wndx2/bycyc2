@@ -14,7 +14,7 @@ const gay_image = [
     "/bycyc Evidence/gay/gay13.png",
     "/bycyc Evidence/gay/gay14.png",
     "/bycyc Evidence/gay/gay15.png",
-    "/bycyc Evidence/gay/gay16.png",
+    "/bycyc Evidence/gay/gay16.PNG",
     "/bycyc Evidence/gay/gay17.png",
     "/bycyc Evidence/gay/gay18.png",
     "/bycyc Evidence/gay/gay19.png",
