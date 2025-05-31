@@ -17,7 +17,7 @@ const gay_image = [
     "/bycyc Evidence/gay/gay16.png",
     "/bycyc Evidence/gay/gay17.png",
     "/bycyc Evidence/gay/gay18.png",
-    "/bycyc Evidence/gay/gay1.png",
+    "/bycyc Evidence/gay/gay19.png",
 ];
 let gay_image_currentIndex = 0;
 
