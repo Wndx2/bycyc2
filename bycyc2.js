@@ -26,7 +26,7 @@ function setGayImage(index) {
     imageElement.src = gay_image[index];
 }
 
-function shuffleGayImage() {
+function shuffleGayImage(retryCount = 0) {
     const imageElement = document.getElementById('gay-image');
     imageElement.classList.add('fade-out');
 
@@ -41,7 +41,10 @@ function shuffleGayImage() {
             }, 500);
         };
         nextImage.onerror = () => {
-            shuffleGayImage();
+            if (retryCount < gay_image.length) {
+                // Skip to next image, avoid infinite recursion
+                shuffleGayImage(retryCount + 1);
+            }
         };
     }, 500);
 }
